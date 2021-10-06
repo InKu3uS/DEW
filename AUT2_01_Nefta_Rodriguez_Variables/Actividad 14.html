@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 14</title>
+</head>
+<body>
+    <script>
+        var entrada = prompt("Introduzca el numero");
+        var numero = parseInt(entrada);
+        var valores = [];
+        while(valores.length <100){
+            if (numero%4===0){
+                valores.push(numero);
+            }
+            numero++
+        }
+        document.write("Los 100 multiplos de 4 a partir del numero "+entrada+" son: <br/>");
+        for (var i =0; i<valores.length; i++){
+            document.write(valores[i]+"<br/>");
+        }
+    </script>
+</body>
+</html>

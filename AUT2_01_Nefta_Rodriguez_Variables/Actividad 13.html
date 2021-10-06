@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 13</title>
+</head>
+<body>
+    <script>
+        var entrada1 = prompt("Introduzca el primer numero");
+        var entrada2 = prompt("Introduzca el segundo numero");
+        var entrada3 = prompt("Introduzca el tercer numero");
+        var num1 = parseInt(entrada1);
+        var num2 = parseInt(entrada2);
+        var num3 =parseInt(entrada3);
+        
+        if(num1 < num2 && num2 < num3){
+            document.write("Se han introducido los numero en orden creciente <br>");
+            if(num1+num2==num3){
+            document.write("La suma de "+ num1 +" mas "+ num2 + " es igual a "+ num3);
+            
+        }
+        else{
+            document.write("Los dos primeros numeros sumados no dan como resultado el tercer numero <br>");
+        }
+        }
+        else{
+            document.write("Los numeros no se han introducido en orden creciente")
+        }
+        
+    </script>
+</body>
+</html>

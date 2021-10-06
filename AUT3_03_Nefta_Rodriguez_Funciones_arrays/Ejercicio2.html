@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+</head>
+<body>
+    <script>
+        var elementos=20;
+        var minimo=50;
+        var maximo=100;
+        var listaAleatoria=[];
+        function arrayAleatorio(elementos, minimo,maximo){
+            for(var i=0; i<=elementos;i++){
+                var aleatorio = Math.floor((Math.random()*(maximo-minimo+1))+minimo);
+                listaAleatoria.push(aleatorio);
+            }
+            document.write(listaAleatoria.toString());
+        }
+        arrayAleatorio(elementos,minimo,maximo);
+    </script>
+</body>
+</html>

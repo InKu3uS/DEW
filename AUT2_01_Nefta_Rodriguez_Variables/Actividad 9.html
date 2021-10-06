@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 9</title>
+</head>
+<body>
+    <script>
+        var entradaMes = prompt("Introduzca el numero del mes");
+        var entradaAnio = prompt("Introduzca el año");
+        var mes = parseInt(entradaMes);
+        var anio = parseInt(entradaAnio);
+        if(mes ==12){
+            document.write((mes-1) + "/" + (anio) + "<br>");
+            document.write((mes=1) + "/" + (anio+1) + "<br>");
+        }else if(mes ==1){
+            document.write((mes+1) + "/" + (anio) + "<br>");
+            document.write((mes=12) + "/" + (anio-1) + "<br>");
+        }else{
+            document.write((mes+1) + "/" + (anio) + "<br>");
+            document.write((mes-1) + "/" + (anio) + "<br>");
+        }
+    </script>
+</body>
+</html>

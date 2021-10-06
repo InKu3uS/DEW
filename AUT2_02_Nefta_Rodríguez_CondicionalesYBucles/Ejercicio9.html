@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+
+<body>
+    <script>
+        var entrada = prompt("Introduzca la cantidad para desglosar");
+        var cantidad = parseInt(entrada);
+        var b500, b200, b100, b50, b20, b10, b5, m2, m1;
+
+        document.write("La suma de " + entrada + "€ se desglosa de la siguiente manera: <br/>");
+
+        if (cantidad >= 500) {
+            b500 = (cantidad - (cantidad % 500)) / 500;
+            cantidad = cantidad % 500;
+            document.write(b500 + " billetes de 500€ <br/>");
+
+        }
+
+        if (cantidad >= 200) {
+            b200 = (cantidad - (cantidad % 200)) / 200;
+            cantidad = cantidad % 200;
+            document.write(b200 + " billetes de 200€ <br/>");
+        }
+
+        if (cantidad >= 100) {
+            b100 = (cantidad - (cantidad % 100)) / 100;
+            cantidad = cantidad % 100;
+            document.write(b100 + " billetes de 100€ <br/>");
+        }
+        if (cantidad >= 50) {
+            b50 = (cantidad - (cantidad % 50)) / 50;
+            cantidad = cantidad % 50;
+            document.write(b50 + " billetes de 50€ <br/>");
+        }
+        if (cantidad >= 20) {
+            b20 = (cantidad - (cantidad % 20)) / 20;
+            cantidad = cantidad % 20;
+            document.write(b20 + " billetes de 20€ <br/>");
+        }
+        if (cantidad >= 10) {
+            b10 = (cantidad - (cantidad % 10)) / 10;
+            cantidad = cantidad % 10;
+            document.write(b10 + " billetes de 10€ <br/>");
+        }
+        if (cantidad >= 5) {
+            b5 = (cantidad - (cantidad % 5)) / 5;
+            cantidad = cantidad % 5;
+            document.write(b5 + " billetes de 5€ <br/>");
+        }
+        if (cantidad >= 2) {
+            m2 = (cantidad - (cantidad % 2)) / 2;
+            cantidad = cantidad % 2;
+            document.write(m2 + " monedas de 2€ <br/>");
+        }
+        if (cantidad >= 1) {
+            m1 = (cantidad - (cantidad % 1)) / 1;
+            cantidad = cantidad % 1;
+            document.write(m1 + " monedas de 1€ <br/>");
+        }
+
+    </script>
+</body>
+
+</html>

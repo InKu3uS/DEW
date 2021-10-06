@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5</title>
+</head>
+<body>
+    <script>
+        var elementos = 20;
+        var minimo = -100;
+        var maximo = 100;
+        var listaAleatoria = [];
+        function arrayAleatorio(elementos, minimo, maximo) {
+            for (var i = 0; i < elementos; i++) {
+                var aleatorio = Math.floor((Math.random() * (maximo - minimo + 1)) + minimo);
+                listaAleatoria.push(aleatorio);
+            }
+        }
+        function menorYmayor() {
+            var menor = 0;
+            var mayor = 0;
+            for (var i = 0; i < listaAleatoria.length; i++) {
+                if (listaAleatoria[i] < menor) {
+                    menor = listaAleatoria[i];
+                }
+                if (listaAleatoria[i] > mayor) {
+                    mayor = listaAleatoria[i]
+                }
+            }
+            document.write("El numero mas pequeño es " + menor + "<br>");
+            document.write("El numero mayor es " + mayor + "<br>");
+
+        }
+        function comprobarRepetido() {
+            for (var i = 0; i < listaAleatoria.length; i++) {
+                if (listaAleatoria.indexOf(i) >= 0) {
+                    document.write("El numero " + i + " esta repetido <br>");
+                }
+            }
+        }
+        arrayAleatorio(elementos, minimo, maximo);
+        menorYmayor();
+        comprobarRepetido();
+    </script>
+</body>
+</html>

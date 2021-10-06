@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+</head>
+<body>
+    <script>
+        var elementos=15;
+        var minimo=-10;
+        var maximo=20;
+        var listaAleatoria=[];
+        function arrayAleatorio(elementos, minimo,maximo){
+            for(var i=0; i<=elementos;i++){
+                var aleatorio = Math.floor((Math.random()*(maximo-minimo+1))+minimo);
+                listaAleatoria.push(aleatorio);
+            }
+        }
+
+        function modificarArray(){
+            for(var i=0; i<=listaAleatoria.length;i++){
+                if(i <= -5){
+                    listaAleatoria.shift();
+                    document.write("Ha salido el numero, "+i+" se ha eliminado el primer elemento de la lista <br>");
+                }
+                if(i > -5 && i <= 0){
+                    listaAleatoria.pop();
+                    document.write("Ha salido el numero, "+i+" se ha eliminado el ultimo elemento de la lista <br>");
+                }
+                if(i > 0 && i <= 10){
+                    listaAleatoria.unshift(i);
+                    document.write("Ha salido el numero, "+i+" se ha añadido al principio de la lista <br>");
+                }
+                if(i > 10 && i <= 20){
+                    listaAleatoria.push(i);
+                    document.write("Ha salido el numero, "+i+" se ha añadido al final de la lista <br>");
+                }
+            }
+        }
+        arrayAleatorio(elementos,minimo,maximo);
+        modificarArray();
+        
+    </script>
+</body>
+</html>
